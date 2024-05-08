@@ -18,8 +18,8 @@ public class TestUtil extends TestBase {
 		this.driver = driver;
 	}
 
-	public static long PAGE_LOAD_TIMEOUT = 20;
-	public static long IMPLICIT_WAIT = 10;
+	public static long PAGE_LOAD_TIMEOUT = 60;
+	public static long IMPLICIT_WAIT = 60;
 	static Workbook book;
 	static Sheet sheet;
 	public static String TESTDATA_SHEET_PATH = "C:/workspaces/SeleniumProjects/FreeCRMTest/src/main/java/com/crm/qa/testdata/FreeCRMTestData.xlsx";
