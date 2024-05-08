@@ -3,6 +3,7 @@ package com.crm.qa.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -32,7 +33,7 @@ public class TestBase {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		//initialization();
+		// initialization();
 	}
 
 	public void initialization() {
@@ -41,7 +42,13 @@ public class TestBase {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
-			driver.manage().deleteAllCookies();//
+			driver.manage().deleteAllCookies();
+			
+			 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.PAGE_LOAD_TIMEOUT));
+		        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtil.IMPLICIT_WAIT));
+
+		        driver.get(prop.getProperty("url"));
+			driver.get(prop.getProperty("url"));
 			driver.get(prop.getProperty("url"));
 
 		}
