@@ -48,8 +48,7 @@ public class TestBase {
 		        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtil.IMPLICIT_WAIT));
 
 		        driver.get(prop.getProperty("url"));
-			driver.get(prop.getProperty("url"));
-			driver.get(prop.getProperty("url"));
+		
 
 		}
 	}
